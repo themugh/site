@@ -1,0 +1,37 @@
+section(id='team', class='container-fluid')
+    .row
+        .col-xs-12.col-sm-12.col-md-12.col-lg-12
+            .container
+                .row
+                    div.col-xs-12.col-sm-12.col-md-12.col-lg-12(style='padding:0px')
+                        h3.title
+                            | MUGH Core Team
+                        br
+                        br
+                        div.content
+                            ul.team-list
+                                each teamMember in CoreTeamList
+                                    li.team-member(data-toggle="modal", data-target='#' + teamMember.id)
+                                        a(href='#', target='_self')
+                                            .avatar
+                                                img(alt=teamMember.name, src='assets/img/' + teamMember.photo)
+                                            p.name
+                                                | #{teamMember.name}
+
+each teamMember in CoreTeamList
+    .modal.fade(tabindex='-1', role='dialog', id='' + teamMember.id)
+        .modal-dialog(role='document')
+            .modal-content
+                .modal-header
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') ×
+                    h4.modal-title
+                        | #{teamMember.name}
+                .modal-body
+                    div(class='row team-member-profile')
+                        .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                            p.profile !{teamMember.profile}
+                            p.social
+                                a.twitter(href='http://twitter.com/' + teamMember.twitter target='_blank') #{teamMember.twitter}
+                                | , 
+                                a(href='http://' + teamMember.blog, target='_blank') #{teamMember.blog}

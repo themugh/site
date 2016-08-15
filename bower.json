@@ -1,0 +1,20 @@
+{
+  "name": "mugh-site",
+  "description": "Microsoft Users Group Hyderabad Website",
+  "main": "",
+  "authors": [
+    "Shravan Kumar Kasagoni <shravan.kasagoni@outlook.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/themugh/dotnetConf",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
